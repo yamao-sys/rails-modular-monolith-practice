@@ -63,3 +63,5 @@ gem 'packs-rails'
 gem 'packwerk'
 
 gem 'packwerk-extensions'
+
+gem 'ridgepole'

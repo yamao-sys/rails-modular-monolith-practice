@@ -1,0 +1,58 @@
+# encoding: utf-8
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+create_table "supporters", id: :bigint, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  t.string "name", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+create_table "companies", id: :bigint, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  t.string "name", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+create_table "projects", id: :bigint, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  t.bigint "company_id", null: false
+  t.string "title", null: false
+  t.integer "budget", null: false
+  t.text "content"
+	t.date "period_from", null: false
+  t.date "period_to", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["company_id"]
+end
+
+create_table "plans", id: :bigint, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  t.bigint "supporter_id", null: false
+  t.bigint "project_id", null: false
+  t.string "title", null: false
+  t.integer "unit_price", null: false
+  t.integer "support_status", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["supporter_id"]
+  t.index ["project_id"]
+end
+
+create_table "plan_steps", id: :bigint, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  t.bigint "plan_id", null: false
+  t.string "title", null: false
+  t.text "content"
+  t.float "duration", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["plan_id"]
+end
+
+create_table "plan_step_results", id: :bigint, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  t.bigint "plan_step_id", null: false
+  t.string "title", null: false
+  t.text "content"
+  t.float "duration", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["plan_step_id"]
+end
