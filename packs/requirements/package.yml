@@ -1,0 +1,7 @@
+enforce_privacy: true
+enforce_dependencies: true
+
+dependencies:
+  - '.'
+
+public_path: app/public
