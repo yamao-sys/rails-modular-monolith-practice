@@ -66,4 +66,4 @@ gem 'packwerk-extensions'
 
 gem 'ridgepole'
 
-gem "requirements", path: "requirements"
+gem "requirements", path: "packs/requirements"

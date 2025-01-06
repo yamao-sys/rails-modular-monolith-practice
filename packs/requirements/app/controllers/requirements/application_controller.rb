@@ -1,4 +1,4 @@
 module Requirements
-  class ApplicationController < ::ApplicationController
+  class ApplicationController < ActionController::Base
   end
 end
