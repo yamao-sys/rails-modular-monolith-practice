@@ -1,3 +1,9 @@
+PATH
+  remote: requirements
+  specs:
+    requirements (0.1.0)
+      rails (>= 7.2.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -362,6 +368,7 @@ DEPENDENCIES
   packwerk-extensions
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
+  requirements!
   ridgepole
   rubocop-rails-omakase
   selenium-webdriver

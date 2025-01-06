@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  draw(:requirements)
+
+  mount Requirements::Engine, at: '/requirements'
 end
