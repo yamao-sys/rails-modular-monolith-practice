@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   mount Requirements::Engine, at: '/requirements'
+  mount Proposal::Engine, at: '/proposal'
 end
