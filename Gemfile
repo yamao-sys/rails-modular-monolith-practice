@@ -57,3 +57,13 @@ group :test do
 end
 
 gem 'dotenv-rails'
+
+gem 'packs-rails'
+
+gem 'packwerk'
+
+gem 'packwerk-extensions'
+
+gem 'ridgepole'
+
+gem "requirements", path: "packs/requirements"

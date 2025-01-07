@@ -1,0 +1,10 @@
+/.bundle/
+/doc/
+/log/*.log
+/pkg/
+/tmp/
+/spec/db/*.sqlite3
+/spec/db/*.sqlite3-*
+/spec/log/*.log
+/spec/storage/
+/spec/tmp/
