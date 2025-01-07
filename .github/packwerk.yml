@@ -1,0 +1,28 @@
+name: Packwerk Check
+
+on:
+  pull_request:
+
+jobs:
+  packwerk-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    # リポジトリのクローン
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Rubyのセットアップ
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.4
+        bundler-cache: true
+
+    # 必要なGemのインストール
+    - name: Install dependencies
+      run: bundle install
+
+    # Packwerkチェックの実行
+    - name: Run Packwerk check
+      run: bundle exec packwerk check
