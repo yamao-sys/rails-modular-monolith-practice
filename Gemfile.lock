@@ -1,4 +1,10 @@
 PATH
+  remote: packs/proposal
+  specs:
+    proposal (0.1.0)
+      rails (>= 7.2.2.1)
+
+PATH
   remote: packs/requirements
   specs:
     requirements (0.1.0)
@@ -366,6 +372,7 @@ DEPENDENCIES
   packs-rails
   packwerk
   packwerk-extensions
+  proposal!
   puma (>= 5.0)
   rails (~> 7.2.2, >= 7.2.2.1)
   requirements!
