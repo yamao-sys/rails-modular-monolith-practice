@@ -9,6 +9,8 @@ WORKDIR /app
 COPY Gemfile /app/Gemfile
 COPY Gemfile.lock /app/Gemfile.lock
 
+COPY packs /app/packs
+
 RUN bundle install
 
 COPY . /app
